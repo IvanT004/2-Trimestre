@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Métodos de Arrays</title>
     <link rel="stylesheet" href="../css/metodosArray(main).css">
+    <script src="../script/metodosArray.js"></script>
 </head>
 <body>
 
@@ -12,13 +13,16 @@
         
         <h1>¿Qué desea hacer?</h1>
 
-        <ol>
-            <li><a href="metodosArray(anadir).html" target="_blank">Añadir elementos al Array</a></li>
-            <li><a href="metodosArray(eliminar).html" target="_blank">Eliminar elementos al Array</a></li>
-            <li><a href="">Ordenar de manera creciente los elementos del Array</a></li>
-            <li><a href="">Ordenar de manera decreciente los elementos del Array</a></li>
-            <li><a href="">Buscar un elemento en Array</a></li>
-        </ol>
+        <label for="">Introduce el elemento con el que desea operar:</label>
+        <input type="text" id="elemento">
+        <div class="botones"> 
+        <button onclick="add()">Añadir elemento en el Array</button>
+        <button onclick="remove()">Eliminar elemento en el Array</button>
+        <button onclick="dec()">Ordenar los elementos de forma decreciente del Array</button>
+        <button onclick="crec()">Ordenar los elementos de forma creciente del Array</button>
+        <button onclick="search()">Buscar un elemento en el Array</button>
+        </div> 
+        <p id="mostrar"></p>
 
     </div>
 </body>
