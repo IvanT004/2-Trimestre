@@ -1,29 +1,42 @@
 
-var ElementList = [""]
+var vehiculos = ["coche","bus","moto"]
+
+function mecanismo(){
+    document.getElementById("escribir").innerHTML = "";
+    for (var i=0;i<colores.length;i++)
+    if (i==0)
+        document.getElementById("escribir").innerHTML += colores[i];
+    else
+        document.getElementById("escribir").innerHTML += ", " + colores[i];
+}
 
 function add() {
 
     var elemento = document.getElementById("introducido").value;
-    ElementList.push(elemento);
-    document.getElementById("escribir").innerHTML = ElementList;
+    vehiculos.push(elemento);
+    mecanismo();
 }
 
 function remove(){
 
-    var elemento = document.getElementById("introducido").value;
-    ElementList.shift(elemento);
-    document.getElementById("escribir").innerHTML = ElementList;
+    vehiculos.pop(elemento);
+    document.getElementById("mostrar").innerHTML = ElementList;
 }
 
 function dec(){
 
-        ElementList.sort(function(a, b){return b - a});
-    
+        document.write(vehiculos.reverse(function(a, b){return b - a}));
 }
 
 function crec(){
 
-    document.write(ElementList.sort(function(a, b){return a - b}))
+    document.write(vehiculos.sort(function(a, b){return a - b}))
 
+}
+
+function search(){
+
+    busqueda = document.getElementById("introducido").value;
+    document.getElementById("escribir").innerHTML = "El " + ncolor + " se encuentra en la posicion " + colores.indexOf(busqueda);
 }
 
