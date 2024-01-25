@@ -3,29 +3,28 @@ var vehiculos = ["coche","bus","moto"]
 
 function mecanismo(){
     document.getElementById("escribir").innerHTML = "";
-    for (var i=0;i<colores.length;i++)
-    if (i==0)
-        document.getElementById("escribir").innerHTML += colores[i];
-    else
-        document.getElementById("escribir").innerHTML += ", " + colores[i];
+    for (var i=0;i<vehiculos.length;i++)
+        if (i==0)
+            document.getElementById("escribir").innerHTML = vehiculos[i];
+        else
+            document.getElementById("escribir").innerHTML += ", " + vehiculos[i];
 }
 
 function add() {
 
-    var elemento = document.getElementById("introducido").value;
+    var elemento = document.getElementById("elemento").value;
     vehiculos.push(elemento);
     mecanismo();
 }
 
 function remove(){
-
-    vehiculos.pop(elemento);
-    document.getElementById("mostrar").innerHTML = ElementList;
+    vehiculos.pop();
+    mecanismo();
 }
 
 function dec(){
 
-        document.write(vehiculos.reverse(function(a, b){return b - a}));
+    document.write(vehiculos.reverse(function(a, b){return b - a}));
 }
 
 function crec(){
