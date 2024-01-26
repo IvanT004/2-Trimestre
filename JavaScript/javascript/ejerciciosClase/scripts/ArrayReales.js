@@ -3,7 +3,7 @@ var resultado = 0;
 
 function anadir(){
 
-    var NewNumb = parseFloat(document.getElementById("new").value);
+    var NewNumb = document.getElementById("new").value;
     Numeros.push(NewNumb);
     document.getElementById("resultado").innerHTML= "Se ha añadido correctamente "+ NewNumb +" en el Array";
     
