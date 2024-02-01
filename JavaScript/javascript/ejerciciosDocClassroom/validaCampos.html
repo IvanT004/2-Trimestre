@@ -1,0 +1,23 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="css/metodosArray(main).css">
+        <script src="script/validar.js"></script>
+    </head>
+    <body>
+        
+        <div class="contenedor">
+        <form action="">
+            <p><label for="">Nombre:</label><input id="nombre" type="text" required></p>
+            <p><label for="">Apellidos:</label><input id="apellidos" type="text"></p>
+            <p><label for="">Email:</label><input id="email" type="email" required></p>
+            <p><label for="">Password:</label><input id="password" type="password" required></p>
+            <p><label for="">Acepta política privacidad</label><input id="verificacion" type="checkbox" required></p>
+            <p><button onclick="validar(document.getElementsByTagName('input'))">Enviar</button></p>
+        </form>
+        </div>
+    </body>
+    </html>
