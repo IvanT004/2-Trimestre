@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../../.."
+		},
+		{
+			"name": "practicas-antes-del-examen",
+			"path": "../../../../../practicas-antes-del-examen"
+		},
+		{
+			"name": "2-Trimestre",
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Lenguaje de marcas"
+	}
+}
