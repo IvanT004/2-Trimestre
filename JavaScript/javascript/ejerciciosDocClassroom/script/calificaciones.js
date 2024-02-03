@@ -1,23 +1,23 @@
 var notas = [];
-var i = 0;
-var nota = 0;
+var media_notas = 0;
 
-function recorrer(){
-        for(var posicion = 0; posicion < notas.length; posicion++){
-        document.getElementById("mostrar").innerHTML = "Se ha registrado la nota " + notas[posicion];
-        }
-        document.getElementById("contenido").innerHTML += notas[i]+ ","
-        i++;
+function mecanismo(){
+    document.getElementById("contenido").innerHTML = "";
+    for (var i=0;i<notas.length;i++)
+        if (i==0)
+            document.getElementById("contenido").innerHTML = notas[i];
+        else
+            document.getElementById("contenido").innerHTML += ", " + notas[i];
 }
 
 function comprobador(){
      
-    nota = parseInt(document.getElementById("nota").value);
+    var nota = parseFloat(document.getElementById("nota").value);
 
     if(nota >=0 && nota<=10){
 
         notas.push(nota);
-        recorrer();
+        mecanismo();
         
     }else{
 
@@ -26,16 +26,33 @@ function comprobador(){
 
 }
 
-/*NO FUNCIONA BORRAR MIRAR*/
+
 function eliminar(){
 
     notas.pop();
-    recorrer(nota);
+    mecanismo();
 }
 
-/*NO FUNCIONA MEDIA MIRAR*/
 function media(){
+ 
+    var suma_notas = 0;
+    for(j=0; j < notas.length; j++){
+       
+        suma_notas += notas[j];
+    }
+    
+    media_notas = suma_notas / notas.length;
+    document.getElementById("mostrar").innerHTML = "La media de las notas registradas es: " + media_notas;
 
-    recorrer();
-    var media_not = (media_not + notas[posicion])/ notas.length+1;
-}
+
+    /*MIRAR */
+    if (document.getElementById("ejecutar").click){
+    $(document).ready(function() {
+        setTimeout(function() {
+            $("#mostrar").fadeOut(1500);
+        },3000);
+    })
+    }
+ }
+
+ 

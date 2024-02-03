@@ -6,13 +6,14 @@
     <title>Calificaciones</title>   
     <link rel="stylesheet" href="css/plantilla_modelo.css">
     <script src="script/calificaciones.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript"></script>
 </head>
 <body>
 
     <div class="contenedor">
         <p id="p1"><label for="">Introduzca las notas del alumno:</label> <input type="text" name="" id="nota"></p>
-        <p><button onclick="comprobador()">Enviar</button> <button onclick="eliminar()">Borrar numero</button><button onclick="media()">Hacer media de las notas</button></p>
+        <p><button onclick="comprobador()">Enviar</button> <button onclick="eliminar()">Borrar numero</button><button onclick="media()" id="ejecutar">Hacer media de las notas</button></p>
         <p id="mostrar"></p>
         <p id="contenido"></p>
 
