@@ -19,7 +19,8 @@ function validar(elementos){
         estanCorrectos = false;
     } 
     if(!validarDNI()){
-        document.getElementById("campo")
+        document.getElementById("campo6").innerHTML = "DNI no válido (12345678X)";
+        estanCorrectos = false;
     }
     return estanCorrectos;
 }
@@ -50,9 +51,12 @@ function validaPassword(){
 }
 
 
+
 function validarDNI(){
     let letra = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E']
     var cadena = document.getElementById("dni").value; //DNI COMPLETO
+    // validarMay(cadena);
+   /* NoEsp(cadena);*/
     var numero = parseInt(cadena.substring(0,8)); //Parte numerica
     var letraUsuario = cadena[8];//Letra escrita por el usuario
     var letraReal = letra[numero%23];//Letra real del DNI calculada segun la formula
@@ -60,4 +64,20 @@ function validarDNI(){
     if(letraUsuario != letraReal) //Si no coincide letras es falso
         dniValido = false;
     return dniValido;
+    
 }
+
+// function validarMay(cadena) {
+
+//     if(cadena !== cadena.toUpperCase())
+//         dniValido = false;
+//         cadena = cadena.toUpperCase(); 
+//     return dniValido = true, cadena;
+    
+// }
+
+
+/*function NoEsp(){
+
+    cadena = cadena.trim();
+}*/
