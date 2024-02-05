@@ -20,7 +20,7 @@ function comprobador(){
         mecanismo();
         
     }else{
-
+        mostrar();
         document.getElementById("mostrar").innerHTML = "No se pueden introducir notas negativas o superiores a 10. Por favor, intentelo de nuevo" 
     }
 
@@ -34,7 +34,9 @@ function eliminar(){
 }
 
 function media(){
- 
+    
+    mostrar();
+
     var suma_notas = 0;
     for(j=0; j < notas.length; j++){
        
@@ -44,15 +46,21 @@ function media(){
     media_notas = suma_notas / notas.length;
     document.getElementById("mostrar").innerHTML = "La media de las notas registradas es: " + media_notas;
 
+   
+    }
 
-    /*MIRAR */
-    if (document.getElementById("ejecutar").click){
+   function mostrar(){
+
+    $(document).ready(function() {
+        setTimeout(function() {
+            $("#mostrar").fadeIn(1000);
+        },2000);
+    })
+
     $(document).ready(function() {
         setTimeout(function() {
             $("#mostrar").fadeOut(1500);
-        },3000);
+        },2000);
     })
-    }
- }
-
+   } 
  
