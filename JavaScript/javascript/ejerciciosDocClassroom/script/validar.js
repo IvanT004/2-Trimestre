@@ -51,32 +51,26 @@ function validaPassword(){
 }
 
 
-function NoEsp(){
-
-    dni.addEventListener("keyup", e=>{
-        
-        let cadena = e.target.value
-        e.target.value = cadena.trim();
-        return cadena;
-
-    })
-}
-
 function validarDNI(){
     let letra = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'] 
-    var cadena = document.getElementById("dni").value; //DNI COMPLETO
-    NoEsp();
-    var numero = parseInt(cadena.substring(0,8)); //Parte numerica
-    var letraUsuario = cadena[8].toUpperCase();//Letra escrita por el usuario
+    //var cadena = document.getElementById("dni").value; //DNI COMPLETO
+    limpia();
+    var numero = parseInt(cadenaLimpia.substring(0,8)); //Parte numerica
+    var letraUsuario = cadena[8];//Letra escrita por el usuario
     var letraReal = letra[numero%23];//Letra real del DNI calculada segun la formula
     var dniValido = true;
     if(letraUsuario != letraReal) //Si no coincide letras es falso
         dniValido = false;
     return dniValido;
-    
+ 
 }
-NoEsp();
 
+function limpia(){
+    let cadena = document.getElementById("dni").value;
+    let cadenaSinEspacios = cadena.replace(/ /g, "");
+    let cadenaLimpia = cadenaSinEspacios.toUpperCase();
+    // document.getElementById("resultado").innerHTML = cadenaLimpia;
+}
 
 
 
