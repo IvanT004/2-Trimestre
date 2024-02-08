@@ -1,9 +1,18 @@
-function mayor(vector){
-    let mayor=vector[0];
-    for(var i=0; i<vector.length; i++){
+var numeros = [];
 
-        if(vector[i]<mayor)
-            mayor = vector[i];
+function anadir(){
+
+    var introducido = parseFloat(document.getElementById("numero").value);
+    numeros.push(introducido);
+    document.getElementById("guardado").innerHTML = "Los números guardados en el array son: " + numeros;
+}
+
+function mayor(){
+    let mayor=numeros[0];
+    for(var i=0; i<numeros.length; i++){
+
+        if(numeros[i]>mayor)
+            mayor = numeros[i];
     }
-    return mayor;
+    return document.getElementById("mayor").innerHTML = mayor;
 }
