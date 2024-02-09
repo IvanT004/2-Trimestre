@@ -16,3 +16,4 @@ function mayor(){
     }
     return document.getElementById("mayor").innerHTML = mayor;
 }
+
