@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html onload="hacerPregunta()">
 <head>
 <meta charset="UTF-8">
 
@@ -24,21 +24,20 @@ var preguntas = [
 var total = preguntas.length; /*Total de preguntas */
 opciones = document.getElementsByTagName("input"); //Opciones del tipo test
 pregunta = preguntas[pos][0];
-chA = preguntas[pos][1];
-chB = preguntas[pos][2];
-chC = preguntas[pos][3];
+    chA = preguntas[pos][1];
+    chB = preguntas[pos][2];
+    chC = preguntas[pos][3];
 
 function hacerPregunta(){
-
-    test = document.getElementById("examen");
-    for(pos; pos<total; pos++){
-        
-        document.getElementById("pregunta").innerHTML = pregunta;
-        document.getElementsByName("opcion1").innerHTML = chA;//mira
-
-    }
-   
     
+    test = document.getElementById("examen");
+
+    if(pos<preguntas.length){
+    test.innerHTML = '<h3>'+pregunta+'</h3>';
+    test.innerHTML = '<input type="radio" name="opciones" value="A">' + chA ;
+    test.innerHTML = '<input type="radio" name="opciones" value="B">' + chB ;
+    test.innerHTML = '<input type="radio" name="opciones" value="C">' + chC ;
+    }
 }
 
 function comprobarRespuesta() {
@@ -48,12 +47,12 @@ function comprobarRespuesta() {
 }
 </script>
 </head>
-<body onload="hacerPregunta()">
+<body>
 <h1>Calculadora humana</h1>
 <h2 id="estado"></h2>
 <div id="examen">
     
-    <h3 id="pregunta"></h3>
+    <h3></h3>
     <p><input type="radio" name="opciones" value="A"></p>
     <p><input type="radio" name="opciones" value="B"></p>
     <p><input type="radio" name="opciones" value="C"></p>
