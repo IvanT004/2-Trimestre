@@ -21,18 +21,44 @@ var preguntas = [
 ['¿Cuánto es 8 / 2?', '10', '2', '4', 'C']
 ];
 
-var total = preguntas.length;  /*Total de preguntas */
+var total = preguntas.length; /*Total de preguntas */
+opciones = document.getElementsByTagName("input"); //Opciones del tipo test
+pregunta = preguntas[pos][0];
+chA = preguntas[pos][1];
+chB = preguntas[pos][2];
+chC = preguntas[pos][3];
+
 function hacerPregunta(){
 
-    test = document.get
+    test = document.getElementById("examen");
+    for(pos; pos<total; pos++){
+        
+        document.getElementById("pregunta").innerHTML = pregunta;
+        document.getElementsByName("opcion1").innerHTML = chA;//mira
+
+    }
+   
+    
 }
 
-function comprobarRespuesta() {}
+function comprobarRespuesta() {
+
+    //opcion: vreificar correcta, 
+    //correctas: cuenta las opciones respondidas correctamente
+}
 </script>
 </head>
-<body>
+<body onload="hacerPregunta()">
 <h1>Calculadora humana</h1>
 <h2 id="estado"></h2>
-<div id="examen"></div>
+<div id="examen">
+    
+    <h3 id="pregunta"></h3>
+    <p><input type="radio" name="opciones" value="A"></p>
+    <p><input type="radio" name="opciones" value="B"></p>
+    <p><input type="radio" name="opciones" value="C"></p>
+    <button onclick="comprobarRespuesta()">Enviar Respuesta</button>  
+</div>
+
 </body>
 </html>
