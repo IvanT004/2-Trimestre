@@ -23,11 +23,11 @@
 
             function Comprobar(){
 
-                NumUs = document.getElementById("numero").value;
+                NumUs = (document.getElementById("numero").value).toString();
                 NumRand = resultado.toString();
 
                 
-                for(i=0; i<=NumUs.length;i++){
+                for(i=0; i<NumUs.length;i++){
                     
                     if(NumUs[i]==NumRand[i]){
 
@@ -35,7 +35,7 @@
                     }
                 } 
             
-                document.getElementById("feedback").innerHTML = "Tu propuesta "+ NumUs + " coincide en " + contador +" cifras";
+                document.getElementById("feedback").innerHTML= "Tu propuesta "+ NumUs + " coincide en " + contador +" cifras";
             }
 
     </script>
