@@ -9,7 +9,7 @@
  <table border="0" cellpadding="0">
      <h1>IES Isbilya</h1>
   <tr>
-    <td width="100%"><img src="s1.jpg" id="fotoActual"></td>
+    <td width="100%"><img src="images_slideshow/s0.jpg" id="fotoActual"></td>
   </tr>
   <tr>
     <td width="100%">
@@ -30,11 +30,11 @@
             var fotos=new Array();
             var indice=0; /* Inicializamos el indice del Array */
             var totalFotos;
-            fotos[0]="images/s0.jpg";
-            fotos[1]="s1.jpg";
-            fotos[2]="s2.jpg";
-            fotos[3]="s3.jpg";
-            fotos[4]="s4.jpg";
+            fotos[0]="images_slideshow/s0.jpg";
+            fotos[1]="images_slideshow/s1.jpg";
+            fotos[2]="images_slideshow/s2.jpg";
+            fotos[3]="images_slideshow/s3.jpg";
+            fotos[4]="images_slideshow/s4.jpg";
 
             function atras(){
                 if(indice>0) { /* Si no era la primera foto... */
@@ -44,7 +44,7 @@
                 {
                     indice= fotos.length-1 ; /* Ponemos la anterior */       
                 }
-                document.getElementById("fotoActual").src = "s"+indice+".jpg";
+                document.getElementById("fotoActual").src = "images_slideshow/s"+indice+".jpg";
             }
             function siguiente(){
                 totalFotos = fotos.length;
@@ -55,7 +55,7 @@
                 {
                     indice=indice+1;        
                 }
-                document.getElementById("fotoActual").src = "s"+indice+".jpg" ; /* Ponemos el nombre del fichero */
+                document.getElementById("fotoActual").src = "images_slideshow/s"+indice+".jpg" ; /* Ponemos el nombre del fichero */
             }
 </script>
         

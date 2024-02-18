@@ -7,13 +7,13 @@
     <script>
         var NumAleat = 0, DirPag= 0; 
         setInterval(random, 3000);
-        var ImgRand = ["banner0.png","banner1.png","banner2.png","banner3.png","banner4.png","banner5.png"];
+        var ImgRand = ["images_banner/banner0.png","images_banner/banner1.png","images_banner/banner2.png","images_banner/banner3.png","images_banner/banner4.png","images_banner/banner5.png"];
         var DirPag = ["https://store.dsautomobiles.es/configurable","https://www.elcorteingles.es/supermercado/","https://www.elcorteingles.es/daitsu/electrodomesticos/aire-acondicionado/","https://www.madridhifi.com/","https://launidad.movistarplus.es/?dis_c=331187589&dclid=CL-Lt9zx4_YCFdZEHQkdLpkExQ","https://www.tikamoon.es/"];
         
         function random(){
 
            NumAleat = Math.floor((Math.random()*(5 -0 + 1)) + 0);
-            document.getElementById("foto").src = "banner"+ NumAleat + ".png"
+            document.getElementById("foto").src = "images_banner/banner"+ NumAleat + ".png"
             document.getElementById("pagina").href = DirPag[NumAleat];
         }
        
