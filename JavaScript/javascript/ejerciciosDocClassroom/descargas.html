@@ -10,12 +10,19 @@
         li{list-style: none; margin-bottom: 0.8rem;}
 
         a{text-decoration: none;color: #9082e0;}
+
+        img{width: 30px; height: 30px; vertical-align: middle; margin-left: 5px;}
+
+        ul{display: grid; grid-template-columns: auto auto; justify-content:space-around;}
+
+        body{position: relative; margin-top: 100px; background-color: #f0e1c6;}
     </style>
 </head>
 <body>  
 
     <ul id="mostrar">
     </ul>
+
     <script>
 
         var enlaces = new Array();
@@ -25,6 +32,7 @@
 
             for(var i = 0; i < 20; i++){
 
+                 
                 //Obtenemos el contenido que hay dentro de "ul"
                 var contenido = document.getElementById("mostrar");
                 //Creamos un elemento "li" y "a"
@@ -38,9 +46,7 @@
                 //Asignamos la ruta de imagen 
                 imagenNub.setAttribute("src", 'images/download.png');
                 imagenNub.setAttribute("alt", 'nube');
-                //Añadimos la etiqueta "img" a la etiqueta "a"
-                enlace.appendChild(imagenNub);
-
+                
 
                 //Creamos la ruta del fichero a visualizar a partir del parámetro "i"
                 var fichero = "ficheros/fichero"+(i+1)+".pdf";
@@ -49,9 +55,13 @@
                 enlace.setAttribute("target", '_blank');
                 //Contenido del texto que contendrá el enlace de la etiqueta "a"
                 enlace.textContent = "Descarga el fichero " + (i+1);
+                //Añadimos la etiqueta "img" a la etiqueta "a"
+                enlace.appendChild(imagenNub);
+                enlace.classList.add("img");
                 //Anidamos la variable enlace y lista a su nodo padre
                 lista.appendChild(enlace);
                 contenido.appendChild(lista);
+
 
             }
                
